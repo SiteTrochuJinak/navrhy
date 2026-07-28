@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>ELEKTRO za průmyslovkou – Vlastimil Šrámek | Frýdek-Místek</title>
+<meta name="description" content="Elektroinstalační materiál, kabely, jističe, svítidla, LED pásky a repase baterií. Prodejna v Místku u Frýdku-Místku.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;600;700;800;900&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-dark:#15171a;
+    --bg-dark2:#1d2024;
+    --bg-light:#f6f3ec;
+    --text-light:#f5f2ea;
+    --text-dark:#1b1d21;
+    --accent:#f4a100;
+    --accent-deep:#a85f00;
+    --muted-dark:#c9c6bd;
+    --muted-light:#6b6a64;
+    --line:rgba(255,255,255,.12);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Work Sans',sans-serif;
+    background:var(--bg-light);
+    color:var(--text-dark);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.big-num{
+    font-family:'Big Shoulders Display',sans-serif;
+    text-transform:uppercase;
+    font-weight:800;
+    letter-spacing:.5px;
+    line-height:.95;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{display:block;max-width:100%;}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 32px;}
+
+  .notice-bar{
+    background:var(--bg-dark);
+    color:var(--muted-dark);
+    text-align:center;
+    font-size:13px;
+    padding:9px 16px;
+    letter-spacing:.3px;
+    border-bottom:1px solid var(--line);
+  }
+
+  header{
+    background:var(--bg-dark);
+    color:var(--text-light);
+    padding:22px 0;
+  }
+  header .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;}
+  .logo{
+    font-family:'Big Shoulders Display',sans-serif;
+    font-weight:800;
+    font-size:22px;
+    text-transform:uppercase;
+    letter-spacing:.5px;
+  }
+  .logo span{color:var(--accent);}
+  nav ul{list-style:none;display:flex;gap:32px;}
+  nav a{font-size:15px;font-weight:500;color:var(--muted-dark);transition:color .2s;}
+  nav a:hover{color:var(--accent);}
+  .phone-pill{
+    background:var(--accent);
+    color:var(--text-dark);
+    font-weight:600;
+    padding:10px 20px;
+    border-radius:30px;
+    font-size:15px;
+    white-space:nowrap;
+  }
+  .nav-links{display:flex;align-items:center;gap:36px;}
+
+  /* HERO */
+  .hero{
+    position:relative;
+    min-height:88vh;
+    display:flex;
+    align-items:flex-end;
+    background-image:linear-gradient(180deg, rgba(10,11,12,.25) 0%, rgba(10,11,12,.55) 55%, rgba(10,11,12,.93) 100%), url('img/1.jpg');
+    background-size:cover;
+    background-position:center;
+    color:var(--text-light);
+  }
+  .hero-inner{
+    width:100%;
+    padding:60px 32px 80px;
+    max-width:1200px;
+    margin:0 auto;
+  }
+  .hero-eyebrow{
+    color:var(--accent);
+    font-weight:600;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    font-size:14px;
+    margin-bottom:18px;
+  }
+  .hero h1{
+    font-size:clamp(48px,8.2vw,104px);
+    max-width:900px;
+  }
+  .hero p{
+    max-width:520px;
+    margin-top:26px;
+    font-size:18px;
+    color:var(--muted-dark);
+  }
+  .hero-actions{
+    margin-top:38px;
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
+    align-items:center;
+  }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    background:var(--accent);
+    color:var(--text-dark);
+    font-weight:600;
+    padding:16px 30px;
+    border-radius:4px;
+    font-size:16px;
+    transition:transform .2s, background .2s;
+  }
+  .btn:hover{transform:translateY(-2px);background:#ffb733;}
+  .btn.ghost{
+    background:transparent;
+    border:1px solid rgba(255,255,255,.4);
+    color:var(--text-light);
+  }
+  .btn.ghost:hover{border-color:var(--accent);color:var(--accent);}
+
+  /* TRUST STRIPE */
+  .trust{
+    background:var(--bg-dark2);
+    color:var(--text-light);
+    padding:46px 0;
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+  .trust .wrap{
+    display:flex;
+    align-items:center;
+    gap:40px;
+    flex-wrap:wrap;
+    justify-content:space-between;
+  }
+  .trust-rating{display:flex;align-items:center;gap:22px;}
+  .trust-rating .big-num{font-size:64px;color:var(--accent);}
+  .stars svg{width:18px;height:18px;fill:var(--accent);}
+  .trust-rating small{display:block;color:var(--muted-dark);font-size:14px;margin-top:4px;}
+  .trust-note{
+    font-size:16px;
+    color:var(--muted-dark);
+    max-width:420px;
+  }
+
+  /* SECTION generic */
+  section{padding:100px 0;}
+  .section-label{
+    color:var(--accent-deep);
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-weight:600;
+    font-size:14px;
+    margin-bottom:16px;
+  }
+  .section-title{
+    font-size:clamp(36px,5.2vw,60px);
+    max-width:760px;
+    margin-bottom:20px;
+  }
+  .section-intro{
+    max-width:560px;
+    color:var(--muted-light);
+    font-size:17px;
+  }
+
+  /* SORTIMENT */
+  .sortiment-head{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;margin-bottom:70px;}
+  .cat-list{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid rgba(0,0,0,.12);}
+  .cat-item{
+    display:flex;
+    align-items:center;
+    gap:22px;
+    padding:26px 20px;
+    border-bottom:1px solid rgba(0,0,0,.12);
+  }
+  .cat-item:nth-child(odd){border-right:1px solid rgba(0,0,0,.12);}
+  .cat-num{
+    font-family:'Big Shoulders Display',sans-serif;
+    font-size:26px;
+    font-weight:700;
+    color:rgba(0,0,0,.25);
+    width:36px;
+    flex-shrink:0;
+  }
+  .cat-icon{
+    width:40px;height:40px;flex-shrink:0;
+    display:flex;align-items:center;justify-content:center;
+    color:var(--accent-deep);
+  }
+  .cat-icon svg{width:26px;height:26px;stroke:var(--accent-deep);fill:none;stroke-width:1.6;}
+  .cat-item h3{
+    font-family:'Work Sans',sans-serif;
+    text-transform:none;
+    font-weight:600;
+    font-size:17px;
+    letter-spacing:0;
+  }
+
+  /* SKLAD */
+  .sklad{
+    background:var(--bg-dark);
+    color:var(--text-light);
+  }
+  .sklad .wrap{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:60px;
+    align-items:center;
+  }
+  .sklad-img{
+    position:relative;
+    overflow:hidden;
+    border-radius:4px;
+  }
+  .sklad-img img{
+    width:100%;height:100%;object-fit:cover;
+    filter:saturate(1.02) contrast(1.03);
+  }
+  .sklad-text .section-label{color:var(--accent);}
+  .sklad-text h2{color:var(--text-light);font-size:clamp(32px,4.6vw,52px);margin-bottom:24px;}
+  .sklad-text p{color:var(--muted-dark);font-size:17px;max-width:480px;margin-bottom:18px;}
+
+  /* REPASE */
+  .repase{
+    background:var(--accent);
+    color:var(--text-dark);
+  }
+  .repase .wrap{
+    display:grid;
+    grid-template-columns:.9fr 1.1fr;
+    gap:60px;
+    align-items:center;
+  }
+  .repase-img{
+    box-shadow:0 30px 60px rgba(0,0,0,.25);
+    border-radius:6px;
+    overflow:hidden;
+    transform:rotate(-1.5deg);
+    border:6px solid #fff;
+  }
+  .repase-img img{width:100%;display:block;}
+  .repase h2{font-size:clamp(34px,5vw,58px);margin-bottom:22px;}
+  .repase-list{list-style:none;margin:26px 0 30px;}
+  .repase-list li{
+    position:relative;
+    padding-left:26px;
+    margin-bottom:14px;
+    font-size:16px;
+    max-width:480px;
+  }
+  .repase-list li::before{
+    content:"";
+    position:absolute;left:0;top:9px;
+    width:10px;height:10px;
+    background:var(--text-dark);
+    border-radius:50%;
+  }
+  .repase .btn{
+    background:var(--text-dark);
+    color:var(--accent);
+  }
+  .repase .btn:hover{background:#000;}
+
+  /* GALLERY */
+  .gallery-head{margin-bottom:56px;}
+  .gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+  }
+  .gallery-item{
+    position:relative;
+    overflow:hidden;
+    border-radius:4px;
+    aspect-ratio:4/5;
+  }
+  .gallery-item img{
+    width:100%;height:100%;object-fit:cover;
+    transition:transform .5s ease;
+  }
+  .gallery-item:hover img{transform:scale(1.06);}
+  .gallery-cap{
+    position:absolute;bottom:0;left:0;right:0;
+    padding:20px 18px 16px;
+    background:linear-gradient(0deg, rgba(0,0,0,.75), transparent);
+    color:#fff;
+    font-size:14px;
+    font-weight:500;
+  }
+
+  /* KONTAKT */
+  .kontakt{
+    background:var(--bg-dark);
+    color:var(--text-light);
+  }
+  .kontakt .wrap{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+  }
+  .kontakt h2{color:var(--text-light);font-size:clamp(34px,5vw,58px);margin-bottom:26px;}
+  .kontakt-block{margin-bottom:28px;}
+  .kontakt-block h4{
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+    font-size:13px;
+    color:var(--accent);
+    margin-bottom:8px;
+    font-weight:600;
+  }
+  .kontakt-block p, .kontakt-block a{font-size:18px;color:var(--text-light);}
+  .kontakt-block a:hover{color:var(--accent);}
+  .map-link{
+    display:inline-flex;align-items:center;gap:8px;
+    margin-top:6px;font-size:14px;color:var(--muted-dark);
+    border-bottom:1px solid var(--muted-dark);
+    padding-bottom:2px;
+  }
+  .map-link:hover{color:var(--accent);border-color:var(--accent);}
+  .kontakt-cta{
+    background:var(--bg-dark2);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:44px;
+    display:flex;flex-direction:column;justify-content:center;
+  }
+  .kontakt-cta .big-num{font-size:22px;color:var(--muted-dark);font-weight:600;text-transform:none;margin-bottom:10px;}
+  .kontakt-cta .btn{justify-content:center;margin-top:22px;}
+
+  footer{
+    background:#0f1113;
+    color:var(--muted-dark);
+    padding:34px 0;
+    font-size:13px;
+    text-align:center;
+  }
+  footer a{color:var(--accent);}
+
+  /* reveal animation */
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease, transform .7s ease;}
+  .reveal.visible{opacity:1;transform:none;}
+
+  @media(max-width:900px){
+    nav ul{display:none;}
+    .sklad .wrap, .repase .wrap, .kontakt .wrap{grid-template-columns:1fr;}
+    .sklad-img{order:-1;}
+    .repase-img{transform:none;}
+    .gallery-grid{grid-template-columns:1fr 1fr;}
+    .cat-list{grid-template-columns:1fr;}
+    .cat-item:nth-child(odd){border-right:none;}
+  }
+  @media(max-width:600px){
+    .wrap{padding:0 20px;}
+    section{padding:70px 0;}
+    .gallery-grid{grid-template-columns:1fr;}
+    .hero{min-height:78vh;}
+    .trust .wrap{flex-direction:column;align-items:flex-start;}
+  }
+</style>
+</head>
+<body>
+
+<div class="notice-bar">Ukázkový návrh webu pro ELEKTRO za průmyslovkou Vlastimil Šrámek · nezávazné</div>
+
+<header>
+  <div class="wrap">
+    <div class="logo">ELEKTRO <span>za průmyslovkou</span></div>
+    <div class="nav-links">
+      <nav>
+        <ul>
+          <li><a href="#sortiment">Sortiment</a></li>
+          <li><a href="#sklad">Prodejna</a></li>
+          <li><a href="#repase">Repase baterií</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+      <a href="tel:+420720992086" class="phone-pill">720 992 086</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Frýdek-Místek · 28. října 1639</div>
+    <h1>Elektromateriál,<br>který máte<br>skutečně skladem</h1>
+    <p>Kabely, jističe, svítidla, spínače, zásuvky i LED osvětlení – vše, co potřebujete na elektroinstalaci, najdete na jednom místě v Místku.</p>
+    <div class="hero-actions">
+      <a href="tel:+420720992086" class="btn">Zavolat 720 992 086</a>
+      <a href="#sortiment" class="btn ghost">Co máme na skladě</a>
+    </div>
+  </div>
+</section>
+
+<section class="trust">
+  <div class="wrap">
+    <div class="trust-rating">
+      <div>
+        <div class="big-num">4,2</div>
+      </div>
+      <div>
+        <div class="stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.2l7.1-.6L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.2l7.1-.6L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.2l7.1-.6L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.2l7.1-.6L12 2z"/></svg>
+        </div>
+        <small>45 hodnocení na Googlu</small>
+      </div>
+    </div>
+    <div class="trust-note">Prodejna elektroinstalačního materiálu a repasí akumulátorů — zákazníci u nás nejčastěji oceňují širokou nabídku skladem a ochotné poradenství přímo na místě.</div>
+  </div>
+</section>
+
+<section id="sortiment">
+  <div class="wrap">
+    <div class="sortiment-head reveal">
+      <div>
+        <div class="section-label">Sortiment</div>
+        <h2 class="section-title">Elektromateriál pro dům, dílnu i stavbu</h2>
+      </div>
+      <p class="section-intro">Od kabelů přes jističe až po svítidla a domovní telefony — vybrané kategorie z naší nabídky.</p>
+    </div>
+
+    <div class="cat-list reveal">
+      <div class="cat-item">
+        <div class="cat-num">01</div>
+        <div class="cat-icon"><svg viewBox="0 0 24 24"><path d="M3 12c3-4 6 4 9 0s6 4 9 0" stroke-linecap="round"/></svg></div>
+        <h3>Kabely a vodiče</h3>
+      </div>
+      <div class="cat-item">
+        <div class="cat-num">02</div>
+        <div class="cat-icon"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="1.5"/><path d="M8 4v16M16 4v16" stroke-linecap="round"/></svg></div>
+        <h3>Rozvodné a elektroměrové skříně</h3>
+      </div>
+      <div class="cat-item">
+        <div class="cat-num">03</div>
+        <div class="cat-icon"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" stroke-linejoin="round"/></svg></div>
+        <h3>Jističe a spínací přístroje</h3>
+      </div>
+      <div class="cat-item">
+        <div class="cat-num">04</div>
+        <div class="cat-icon"><svg viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="2"/><path d="M9 9h6v6H9z"/></svg></div>
+        <h3>Instalační krabice a vývodky</h3>
+      </div>
+      <div class="cat-item">
+        <div class="cat-num">05</div>
+        <div class="cat-icon"><svg viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="18" rx="2"/><circle cx="10" cy="9" r="1"/><circle cx="14" cy="9" r="1"/></svg></div>
+        <h3>Spínače a zásuvky</h3>
+      </div>
+      <div class="cat-item">
+        <div class="cat-num">06</div>
+        <div class="cat-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="10" r="6"/><path d="M9 20h6M10 22h4M9 16h6" stroke-linecap="round"/></svg></div>
+        <h3>Svítidla, svítilny a LED pásky</h3>
+      </div>
+      <div class="cat-item">
+        <div class="cat-num">07</div>
+        <div class="cat-icon"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 5-3 8-7 9-4-1-7-4-7-9V6l7-3z"/></svg></div>
+        <h3>Hromosvodový a zemnící materiál</h3>
+      </div>
+      <div class="cat-item">
+        <div class="cat-num">08</div>
+        <div class="cat-icon"><svg viewBox="0 0 24 24"><path d="M4 5c3 6 8 11 15 15l2-3c-1-2-3-3-4-2l-1 1c-2-1-4-3-5-5l1-1c1-1 0-3-2-4l-3-2-3 1z" stroke-linejoin="round"/></svg></div>
+        <h3>Domovní telefony a zvonky</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sklad" id="sklad">
+  <div class="wrap">
+    <div class="sklad-img reveal">
+      <img src="img/2.jpg" alt="Regály se skladovými zásobami elektromateriálu v prodejně">
+    </div>
+    <div class="sklad-text reveal">
+      <div class="section-label">Naše prodejna</div>
+      <h2>Regály nejsou pro parádu</h2>
+      <p>Kabely, jističe, svítidla, spínače – většinu běžně poptávaného elektromateriálu u nás rovnou najdete na skladě, bez čekání na objednávku.</p>
+      <p>Poradíme přímo na místě, ať už řešíte drobnou opravu doma, nebo potřebujete materiál na celou instalaci.</p>
+    </div>
+  </div>
+</section>
+
+<section class="repase" id="repase">
+  <div class="wrap">
+    <div class="repase-img reveal">
+      <img src="img/3.jpg" alt="Leták s nabídkou repase baterií a akumulátorů">
+    </div>
+    <div class="repase-text reveal">
+      <div class="section-label" style="color:var(--text-dark)">Repase baterií</div>
+      <h2>Delší život vašemu aku nářadí</h2>
+      <ul class="repase-list">
+        <li>Repase standardních baterií a akumulátorů — NiCd, NiMH i Li-Ion do ručního nářadí, nouzových svítidel, telefonů, měřicích přístrojů, hraček a rádiostanic</li>
+        <li>Výměna článků v bateriích zapouzdřením do původního obalu či smršťovací fólie</li>
+        <li>Možnost navýšení kapacity a profesionální bodové svařování</li>
+        <li>Eko likvidace původních baterií a konzultace zdarma</li>
+      </ul>
+      <a href="tel:+420720992086" class="btn">Domluvit repasi telefonicky</a>
+    </div>
+  </div>
+</section>
+
+<section class="gallery-section">
+  <div class="wrap">
+    <div class="gallery-head reveal">
+      <div class="section-label">Nahlédněte k nám</div>
+      <h2 class="section-title">Jak to u nás vypadá</h2>
+    </div>
+    <div class="gallery-grid reveal">
+      <div class="gallery-item">
+        <img src="img/1.jpg" alt="Prodejní pult a regály s elektromateriálem">
+        <div class="gallery-cap">Prodejna a pult</div>
+      </div>
+      <div class="gallery-item">
+        <img src="img/4.jpg" alt="Regály s elektroinstalačním materiálem v prodejně">
+        <div class="gallery-cap">Regály s materiálem</div>
+      </div>
+      <div class="gallery-item">
+        <img src="img/5.jpg" alt="Sklad elektrosoučástek a svítidel">
+        <div class="gallery-cap">Sklad svítidel a součástek</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="kontakt" id="kontakt">
+  <div class="wrap">
+    <div class="kontakt-info reveal">
+      <h2>Zastavte se za průmyslovkou</h2>
+      <div class="kontakt-block">
+        <h4>Telefon</h4>
+        <a href="tel:+420720992086">720 992 086</a>
+      </div>
+      <div class="kontakt-block">
+        <h4>Adresa</h4>
+        <p>28. října 1639, Místek<br>738 01 Frýdek-Místek</p>
+        <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=28.+října+1639+Místek+Frýdek-Místek" target="_blank" rel="noopener">Zobrazit na mapě →</a>
+      </div>
+      <div class="kontakt-block">
+        <h4>Hodnocení</h4>
+        <p>4,2 z 5 · 45 recenzí na Googlu</p>
+      </div>
+    </div>
+    <div class="kontakt-cta reveal">
+      <div class="big-num">Potřebujete poradit s výběrem materiálu nebo se zeptat na repasi baterie?</div>
+      <p style="color:var(--muted-dark);font-size:15px;">Nejrychlejší je zavolat přímo — domluvíme se na dostupnosti i termínu.</p>
+      <a href="tel:+420720992086" class="btn">Zavolat 720 992 086</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>ELEKTRO za průmyslovkou · Vlastimil Šrámek · 28. října 1639, Místek, 738 01 Frýdek-Místek · <a href="tel:+420720992086">720 992 086</a></p>
+</footer>
+
+<script>
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add('visible');
+        io.unobserve(e.target);
+      }
+    });
+  },{threshold:0.15});
+  revealEls.forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>
